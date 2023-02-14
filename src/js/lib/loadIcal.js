@@ -63,7 +63,8 @@ function filterEvents (events, ...args) {
               uid: event.uid,
               summary: event.summary,
               start: event.start,
-              end: event.end
+              end: event.end,
+              busyStatus: event.microsoftBusyStatus
             })
           }
         }

@@ -404,7 +404,7 @@ var ical = (function (name, definition) {
       CREATED: dateParam('created'),
       'LAST-MODIFIED': dateParam('lastmodified'),
       'RECURRENCE-ID': recurrenceParam('recurrenceid'),
-
+      'X-MICROSOFT-CDO-BUSYSTATUS': storeParam('microsoftBusyStatus'), // https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/cd68eae7-ed65-4dd3-8ea7-ad585c76c736
     },
 
     handleObject(name, val, params, ctx, stack, line) {

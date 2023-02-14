@@ -26,3 +26,7 @@ This plugin is available on the Stream Deck store, you can also download [the la
   * At the end of the title animation, the button will go back to show the time left until the next meeting
 * Changes icon color to orange when there are 5 minutes left for the next meeting to start
 * Changes icon color to red when there are 30 seconds left for the next meeting to start
+
+### Building
+npm run production
+.\DistributionTool.exe -b -i  Release\com.pedrofuentes.ical.sdPlugin -o Release

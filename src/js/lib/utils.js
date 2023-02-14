@@ -14,6 +14,10 @@ function isUpcoming (obj) {
   return (obj.start.getTime() > now)
 }
 
+function isStatusBusy (obj) {
+  return (obj.busyStatus == 'BUSY')
+}
+
 export function eventsSecondsAndNowDifference (date) {
   const now = (new Date()).getTime()
   const time = date.getTime()
@@ -21,11 +25,11 @@ export function eventsSecondsAndNowDifference (date) {
 }
 
 export function findActiveEvents () {
-  return window.eventsCache.events.filter(isActiveEvent)
+  return window.eventsCache.events.filter(isActiveEvent).filter(isStatusBusy)
 }
 
 export function findNextEvent () {
-  return window.eventsCache.events.filter(isUpcoming)[0]
+  return window.eventsCache.events.filter(isUpcoming).filter(isStatusBusy)[0]
 }
 
 export function sec2time (timeInSeconds) {
